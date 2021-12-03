@@ -35,8 +35,8 @@ const Orders = ({
 
   return (
     <div className={styles.ordersContainer}>
-      <button className={styles.addOrderButton} onClick={() => showAddModal()}>Add Order</button>
-      <table>
+      <button class="button is-primary is-light" onClick={() => showAddModal()}>Add Order</button>
+      <table class="table is-striped">
         <thead>
           <tr>
             <th>Number</th>
@@ -61,7 +61,7 @@ const Orders = ({
                 <td>{order.customerPhone}</td>
                 <td>{order.deliverType}</td>
                 <td>{order.amount}</td>
-                <td style={{textAlign: 'center'}}> <button onClick={() => showDeleteModal(order._id)}>X</button> </td> </tr>
+                <td style={{textAlign: 'center'}}> <button class="button is-danger is-light" onClick={() => showDeleteModal(order._id)}>X</button> </td> </tr>
             )
           })}
         </tbody>
