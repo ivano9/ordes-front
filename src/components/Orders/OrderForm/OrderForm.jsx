@@ -6,7 +6,7 @@ import { closeModal as closeModalAction } from '../../../redux/actions/modalActi
 import { Form, Field } from 'react-final-form'
 import { required } from "../../../utils/validations"
 import Select from "../../SharedComponents/Select/Select"
-import Button from "../../SharedComponents/Button/Button";
+import Button from "../../SharedComponents/Button/Button"
 
 
 const OrderForm = ({

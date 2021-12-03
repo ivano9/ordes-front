@@ -17,7 +17,7 @@ const Orders = ({
 }) => {
   useEffect(() => {
     getOrders()
-  }, [getOrders])
+  }, [])
 
   if (isLoading)
     return <div>Loading...</div>

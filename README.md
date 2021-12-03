@@ -6,7 +6,8 @@
   ```bash
   git clone git@github.com:ivano9/ordes-front.git && \
   cd ordes-front && \
-  npm install
+  npm install && \
+  npm run start
   ```
 
 ## Autor
