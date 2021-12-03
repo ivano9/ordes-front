@@ -1,4 +1,3 @@
-import './App.css';
 // import OrderListWrapper from './components/orders-list/OrderListWrapper'
 import Orders from './components/Orders/Orders'
 import Home from './components/Home/Home'

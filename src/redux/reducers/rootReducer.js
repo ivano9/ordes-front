@@ -4,7 +4,7 @@ import modalReducer from './modalReducer'
 
 const rootReducer = combineReducers({
   orders: ordersReducer,
-  modal: modalReducer
+  // modal: modalReducer
 })
 
 export default rootReducer

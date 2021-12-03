@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { getOrders as getOrdersAction } from '../../redux/actions/ordersActions'
 import { showModal as showModalAction } from '../../redux/actions/modalActions'
 import modalTypes from '../../constants/modalTypes'
-import styles from './orders.module.css'
+import styles from './Orders.module.css'
 
 
 const Orders = ({
@@ -36,23 +36,33 @@ const Orders = ({
   return (
     <div className={styles.ordersContainer}>
       <button className={styles.addOrderButton} onClick={() => showAddModal()}>Add Order</button>
-      <table className={styles.ordersTable}>
+      <table>
         <thead>
           <tr>
-            <tn>Name</tn>
-            <tn>Specie</tn>
-            <tn>Gender</tn>
-            <tn style={{with: '20px'}}></tn>
+            <th>Number</th>
+            <th>Date of Delivery</th>
+            <th>Id Deliverer</th>
+            <th>State</th>
+            <th>Customer Name</th>
+            <th>Customer Phone</th>
+            <th>Type of Deliver</th>
+            <th>Amount</th>
           </tr>
         </thead>
         <tbody>
           {orders.map(order => {
             return (
               <tr key={order._id}>
-                <td>{order.name}</td>
-                <td>{order.specie}</td>
-                <td>{order.gender}</td>
-                <td style={{textAlign: 'center'}}> <button onClick={() => showDeleteModal(order._id)}>X</button> </td> </tr> )
+                <td>{order.number}</td>
+                <td>{order.deliveryDateTime}</td>
+                <td>{order.deliverer}</td>
+                <td>{order.state}</td>
+                <td>{order.customerName}</td>
+                <td>{order.customerPhone}</td>
+                <td>{order.deliverType}</td>
+                <td>{order.amount}</td>
+                <td style={{textAlign: 'center'}}> <button onClick={() => showDeleteModal(order._id)}>X</button> </td> </tr>
+            )
           })}
         </tbody>
       </table>
