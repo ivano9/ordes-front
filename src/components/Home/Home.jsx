@@ -1,5 +1,11 @@
 import React from 'react';
+import './Home.module.css'
 
-export const Home = () => {
-  return <div>Home</div>;
-};
+const Home = () =>
+  <section>
+    <div>Home</div>
+    <div>Iván Giovanazzi</div>
+    <a href='/orders'>Go to Orders</a>
+  </section>
+
+export default Home
